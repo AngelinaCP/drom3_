@@ -1,4 +1,4 @@
-CREATE DATABASE drom3 IF NOT EXISTS;
+CREATE DATABASE drom3;
 
 CREATE TABLE photo(
 	id SERIAL PRIMARY KEY,
@@ -244,4 +244,4 @@ select row_to_json(photo_alias) from (select photo_id, url, alt from photo) phot
 
 select array_agg(row_to_json(photo_alias)) from (select * from photo) photo_alias
 
-alter table photo rename column photo_id  to id
+select * from cars, photo
