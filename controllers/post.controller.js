@@ -16,10 +16,10 @@ class postController {
 			// res.json([allCars.rows, photos.rows])
 			// res.json(obj4);
 			// const newObj = object1.json.concat(allCars.json);
-			const allCars = await db.query("select spec_card, city, marka, model, engine, year, price, transmission, drive_unit, body_type, color, mileage, \
-			json_agg(photo.*) as photo \
-			from cars join photo on photo.car_id = cars.id \
-			group by 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12")
+			const allCars = await db.query("SELECT spec_card, city, marka, model, engine, year, price, transmission, drive_unit, body_type, color, mileage, \
+											json_agg(photo.*) as PHOTO \
+											FROM cars JOIN photo ON photo.car_id = cars.id \
+											GROUP BY 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12")
 			res.json(allCars.rows)
 		  } catch (err) {
 			console.error(err.message);
