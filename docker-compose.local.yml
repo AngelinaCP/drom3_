@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  db:
+    container_name: drom3-db
+    image: postgres:14.3-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Coldplay
+      POSTGRES_DB: drom3
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+                # copy the sql script to create tables
+      - ./sql/create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
+    ports:
+      - '0.0.0.0:5432:5432'
