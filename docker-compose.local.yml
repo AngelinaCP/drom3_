@@ -9,8 +9,8 @@ services:
       POSTGRES_PASSWORD: Coldplay
       POSTGRES_DB: drom3
     volumes:
-      - ./postgres-data:/var/lib/postgresql/data
-                # copy the sql script to create tables
+      - ./postgresql-data:/var/lib/postgres-data
       - ./sql/create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
+      - ./sql/fill_tables.sql:/docker-entrypoint-initdb.d/fill_tables.sql
     ports:
       - '0.0.0.0:5432:5432'

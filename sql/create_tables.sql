@@ -1,5 +1,3 @@
-CREATE DATABASE drom3;
-
 CREATE TABLE cars(
 	id SERIAL PRIMARY KEY,
 	spec_card BOOLEAN,
