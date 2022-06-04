@@ -3,7 +3,7 @@ INSERT INTO cars (spec_card, city, marka, model, engine, year, price, transmissi
 		VALUES ('false', 'Барнаул', 'Hyundai', 'Avante', 'бензин, 1.6л', '2011г', '1000000', 'передний', 'седан',
 				'automatic transmission', 'белый', '180000');
 INSERT INTO cars (spec_card, city, marka, model, engine, year, price, transmission, 
-				  drive_unit, body_type, color, mileage);
+				  drive_unit, body_type, color, mileage)
 		VALUES ('false', 'Казань', 'Hyundai', 'Avante', 'бензин, 1.6л', '2015г', '1500000', 'передний', 'седан',
 				'automatic transmission', 'красный', '180000');				
 INSERT INTO photo (url, alt, car_id) VALUES ('https://avoreshin.github.io/json-api/Images/id1/1.jpeg', 'photo', 1);
