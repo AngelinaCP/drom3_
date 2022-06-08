@@ -201,7 +201,7 @@ CREATE TABLE photo(
 );
 
 CREATE TABLE contacts(
-	contact_id SERIAL PRIMARY KEY,
+	contact_id SERIAL PRIMARY KEY, 
 	name VARCHAR(255),
 	mobile VARCHAR(255),
 	email VARCHAR(255),
