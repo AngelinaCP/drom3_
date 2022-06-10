@@ -1,0 +1,6 @@
+# compiled output
+/ghnode_modules
+
+# DB
+postgres-data/
+.env

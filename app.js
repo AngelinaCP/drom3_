@@ -8,7 +8,7 @@ const db = require('./db')
 app.use(cors());
 app.use(express.json())
 
-db.authenticate()
+db.authenticate() 
 	.then(() => console.log('DB connected successfully'))
 	.catch(err => console.log("Error "  + err));
  

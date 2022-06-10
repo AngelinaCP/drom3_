@@ -1,10 +1,12 @@
 const Sequelize = require('sequelize');
 const db = require('../db');
 
-const Gig = db.define('cars', {
+
+module.exports = (sequelize) => {
+	const Gig = db.define('cars', {
 	id: {
 		type: Sequelize.INTEGER,
-		primaryKey: true
+		 primaryKey: true
 	},
 	spec_card: {
 		type: Sequelize.BOOLEAN
@@ -42,6 +44,26 @@ const Gig = db.define('cars', {
 	mileage: {
 		type: Sequelize.STRING
 	}
-})
+});
+	const photo = db.define('photo', {
+
+		id: {
+			type: Sequelize.INTEGER,
+			primaryKey: true
+		},
+		url: {
+			type: Sequelize.STRING,
+		},
+		alt: {
+			type: Sequelize.STRING,
+		},
+		car_id: {
+			type: Sequelize.INTEGER,
+		}
+	})
+
+	Gig.hasone(photo);
+	photo.belongsTo(Gig);
+
 
 module.exports = Gig;
